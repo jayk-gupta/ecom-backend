@@ -52,6 +52,6 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/chatbot", chatbotRoutes);
 //////////////////////////////////////////////////
-app.listen(PORT, () => {
-  console.log("app is running on port 3000");
+app.listen(PORT || 3000, "0.0.0.0", () => {
+  console.log(`Server running`);
 });
