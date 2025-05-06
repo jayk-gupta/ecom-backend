@@ -25,7 +25,7 @@ app.get("/", (req: Request, res: Response) => {
 // app.use("/api/products", productRoutes);
 
 // CONFIGURATIONS
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = process.env.PORT || 3000;
 const PASSWORD = process.env.PASSWORD;
 ////////////////////////////////////////////////////////////
 // DATABASE CONNECTION
@@ -52,6 +52,6 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/chatbot", chatbotRoutes);
 //////////////////////////////////////////////////
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running`);
+app.listen(PORT, () => {
+  console.log("app is running on port 3000");
 });
