@@ -5,9 +5,15 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://ecom-frontend-swart.vercel.app/ ",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "allowedOrigins",
     credentials: true,
   })
 );
