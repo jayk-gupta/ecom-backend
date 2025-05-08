@@ -3,7 +3,7 @@ import User from "../models/User";
 import Otp from "../models/Otp";
 import { generateToken } from "../jwt";
 const nodemailer = require("nodemailer");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 export interface AuthRequest extends Request {
   userPayload: {
     userId: string;
